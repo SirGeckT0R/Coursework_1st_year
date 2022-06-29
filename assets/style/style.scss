@@ -1,4 +1,28 @@
-.header {
+@import url(./font_style.css);
+
+$logo_color: #ffa397;
+
+@mixin horiz_flex {
   display: flex;
   flex-direction: row;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.match {
+  font-family: 'SFProText';
+  font-weight: 200;
+  text-transform: uppercase;
+  transform: scaleX(150%);
+  margin: 0;
+  color: $logo_color;
+}
+
+.header {
+  @include horiz_flex();
+  gap: 50px;
+  align-items: center;
 }

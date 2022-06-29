@@ -1,4 +1,21 @@
+@import url(./font_style.css);
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.match {
+  font-family: "SFProText";
+  font-weight: 200;
+  text-transform: uppercase;
+  transform: scaleX(150%);
+  margin: 0;
+  color: #ffa397;
+}
+
 .header {
   display: flex;
   flex-direction: row;
+  gap: 50px;
+  align-items: center;
 }
