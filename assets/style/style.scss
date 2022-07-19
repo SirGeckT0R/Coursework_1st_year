@@ -4,7 +4,7 @@ $logo_color: #ffa397;
 $nav_color: #928282;
 $main_color: #8b7a7a;
 $addTextColor: #882914;
-$button_color: #ffb2a1;
+$buttonAndReviewColor: #ffb2a172;
 $main_font: 'SFProText';
 
 @mixin horiz_flex {
@@ -15,9 +15,24 @@ $main_font: 'SFProText';
   display: flex;
   flex-direction: column;
 }
+@mixin headersSection {
+  font-size: 40px;
+  color: #ec9f8f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@mixin sectionText {
+  color: $main_color;
+  font-weight: 600;
+  font-size: 24px;
+  width: 370px;
+}
 
 body {
   font-family: $main_font;
+}
+a {
+  text-decoration: none;
 }
 
 .main_frame {
@@ -39,17 +54,15 @@ body {
     font-weight: bold;
     color: $main_color;
     span {
-      font-size: 40px;
-      color: #ec9f8f;
-      text-transform: uppercase;
+      @include headersSection();
     }
   }
   p {
-    color: $main_color;
-    font-weight: 600;
-    font-size: 26px;
-    width: 370px;
+    @include sectionText();
     margin: 0;
+  }
+  a {
+    margin-top: 37px;
   }
 }
 
@@ -76,22 +89,181 @@ body {
     padding: 0 10px;
   }
   a {
-    text-decoration: none;
     color: $nav_color;
     font-family: $main_font;
     font-size: 20px;
   }
 }
 
-.main_button {
+.buttons {
   width: 230px;
   height: 60px;
-  margin-top: 37px;
   text-align: center;
   border-radius: 25px;
-  background-color: rgba(255, 178, 161, 72%);
+  background-color: $buttonAndReviewColor;
   font-size: 20px;
   font-weight: bold;
   color: $addTextColor;
   line-height: 60px;
+  border-width: 0px;
 }
+
+.selling_point {
+  @include horiz_flex();
+  justify-content: space-between;
+  div {
+    padding: 0px 95px;
+    @include vert_flex();
+    justify-content: center;
+    h2 {
+      @include headersSection();
+    }
+    p {
+      @include sectionText();
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}
+
+.girl_section {
+  background-color: #fffafa;
+}
+
+.reviews {
+  margin-top: 77px;
+  h2 {
+    @include headersSection();
+    text-align: center;
+  }
+}
+
+.review_card {
+  @include horiz_flex();
+  width: 805px;
+  margin: 10px;
+  border-radius: 25px;
+  background-color: #ffc7bb17;
+  img {
+    border-radius: 25px 0 0 25px;
+  }
+  div {
+    padding: 0px 24px;
+    @include vert_flex();
+    justify-content: center;
+    h3 {
+      color: #ec9f8f;
+      font-weight: 600;
+      font-size: 36px;
+    }
+    p {
+      @include sectionText();
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+}
+
+.scroll_box {
+  @include horiz_flex();
+  justify-content: stretch;
+  overflow-x: scroll;
+  margin-left: 57px;
+  &::-webkit-scrollbar {
+    height: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ffe9e5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ec9f8f;
+  }
+}
+
+.grad_rev {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    width: 100%;
+    height: calc(100% - 12px);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 255) 100%
+    );
+  }
+}
+
+.form_first {
+  @include vert_flex();
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/quiz.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 609px;
+  text-align: center;
+  margin-top: 77px;
+  h2 {
+    @include headersSection();
+    margin-bottom: 0;
+  }
+  p {
+    @include sectionText();
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.quiz {
+  @include vert_flex();
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 609px;
+  text-align: center;
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/quiz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  h2 {
+    @include headersSection();
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  input {
+    appearance: none;
+    background-color: #fff;
+    color: $addTextColor;
+    width: 25px;
+    height: 25px;
+    border: 0.1rem solid $addTextColor;
+    border-radius: 50%;
+    &:checked {
+      background-color: #fcc3b7;
+    }
+  }
+  label {
+    @include sectionText();
+  }
+}
+
+//TODO transitions and animations, adaptivity, scripts

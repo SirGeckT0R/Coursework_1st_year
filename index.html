@@ -44,10 +44,13 @@
             </header>
             <h2>А ты хочешь <br /><span>найти свою любовь?</span></h2>
             <p> Сделай первый шаг<br /> на пути счастливой жизни</p>
-            <a class="main_button"><span>Найти пару</span></a>
+            <a
+                class="buttons"
+                href=""
+            ><span>Найти пару</span></a>
         </section>
 
-        <section>
+        <section class="selling_point">
             <img
                 src="./assets/img/roses.png"
                 alt="Roses"
@@ -55,14 +58,14 @@
                 height="482px"
             />
             <div>
-                <h2>Знакомится онлайн – это просто</h2>
+                <h2>Знакомится онлайн – <br />это просто</h2>
                 <p>Это действительно просто! Все, что тебе нужно сделать – это заполнить свою анкету и за один клик
                     мы
                     подберем тебе сразу несколько подходящих партнеров!</p>
             </div>
         </section>
 
-        <section>
+        <section class="selling_point girl_section">
             <div>
                 <h2>Не вешаем ярлыки</h2>
                 <p>Мы соединяем людей, выбирая пары не по росту и весу,
@@ -78,7 +81,7 @@
             />
         </section>
 
-        <section>
+        <section class="selling_point">
             <img
                 src="./assets/img/puzzle.png"
                 alt="Puzzle piece"
@@ -96,103 +99,123 @@
             </div>
         </section>
 
-        <section>
+        <section class="reviews">
             <h2>
-                Послушай людей, которым мы уже помогли найти друг друга
+                Послушай людей, которым мы<br /> уже помогли найти друг друга
             </h2>
-            <div>
-                <div>
-                    <img
-                        src="./assets/img/review.png"
-                        alt="Smiling couple"
-                        width="195px"
-                        height="273px"
-                    />
+            <div class="grad_rev">
+                <div class="scroll_box">
                     <div>
-                        <h3>
-                            Наталья и Тони
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. </p>
+                        <div class="review_card">
+                            <img
+                                src="./assets/img/review.png"
+                                alt="Smiling couple"
+                                width="195px"
+                                height="273px"
+                            />
+                            <div>
+                                <h3>
+                                    Наталья и Тони
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <img
-                        src="./assets/img/review.png"
-                        alt="Smiling couple"
-                        width="195px"
-                        height="273px"
-                    />
                     <div>
-                        <h3>
-                            Наталья и Тони
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. </p>
+                        <div class="review_card">
+                            <img
+                                src="./assets/img/review.png"
+                                alt="Smiling couple"
+                                width="195px"
+                                height="273px"
+                            />
+                            <div>
+                                <h3>
+                                    Наталья и Тони
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <img
-                        src="./assets/img/review.png"
-                        alt="Smiling couple"
-                        width="195px"
-                        height="273px"
-                    />
                     <div>
-                        <h3>
-                            Наталья и Тони
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua. </p>
+                        <div class="review_card">
+                            <img
+                                src="./assets/img/review.png"
+                                alt="Smiling couple"
+                                width="195px"
+                                height="273px"
+                            />
+                            <div>
+                                <h3>
+                                    Наталья и Тони
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="form_first">
             <h2>Попробуй прямо сейчас!</h2>
             <p>Ответь на вопросы и подберем тебе первую пару</p>
-            <button>Начать</button>
+            <button class="buttons">Начать</button>
         </section>
 
-        <form>
+        <form class="quiz">
             <h2>Question goes here</h2>
-            <input
-                type="radio"
-                name="option1"
-                id="option1"
-            />
-            <label for="option1">Option 1</label>
-            <input
-                type="radio"
-                name="option2"
-                id="option2"
-            />
+            <div class="quiz_line">
+                <input
+                    type="radio"
+                    name="option"
+                    id="option1"
+                    value=""
+                    checked
+                />
+                <label for="option1">Option 1</label>
+            </div>
+            <div class="quiz_line">
+                <input
+                    type="radio"
+                    name="option"
+                    id="option2"
+                    value=""
+                />
 
-            <label for="option2">Option 2</label>
-            <input
-                type="radio"
-                name="option3"
-                id="option3"
-            />
+                <label for="option2">Option 2</label>
+            </div>
+            <div class="quiz_line">
+                <input
+                    type="radio"
+                    name="option"
+                    id="option3"
+                    value=""
+                />
 
-            <label for="option3">Option 3</label>
-            <input
-                type="radio"
-                name="option4"
-                id="option4"
-            />
+                <label for="option3">Option 3</label>
+            </div>
+            <div class="quiz_line">
+                <input
+                    type="radio"
+                    name="option"
+                    id="option4"
+                    value=""
+                />
 
-            <label for="option4">Option 4</label>
+                <label for="option4">Option 4</label>
+            </div>
         </form>
 
         <section>
