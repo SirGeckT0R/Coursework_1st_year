@@ -27,6 +27,13 @@ $main_font: 'SFProText';
   font-size: 24px;
   width: 370px;
 }
+@mixin quiz_back {
+  width: 100%;
+  height: 609px;
+  background-image: url('../img/quiz.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 body {
   font-family: $main_font;
@@ -203,10 +210,7 @@ a {
   @include vert_flex();
   justify-content: center;
   align-items: center;
-  background-image: url('../img/quiz.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+  @include quiz_back();
   height: 609px;
   text-align: center;
   margin-top: 77px;
@@ -229,14 +233,9 @@ a {
   position: relative;
   width: 100%;
   height: 609px;
-  text-align: center;
   &::before {
     content: '';
-    height: 100%;
-    width: 100%;
-    background-image: url('../img/quiz.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include quiz_back();
     position: absolute;
     top: 0;
     left: 0;
@@ -246,23 +245,69 @@ a {
   }
   h2 {
     @include headersSection();
-    margin-bottom: 0;
+    margin: 83px 0 43px;
     text-transform: none;
+  }
+  div {
+    width: 53%;
+    height: 14%;
   }
   input {
     appearance: none;
     background-color: #fff;
-    color: $addTextColor;
     width: 25px;
     height: 25px;
     border: 0.1rem solid $addTextColor;
     border-radius: 50%;
+    margin-right: 21px;
     &:checked {
       background-color: #fcc3b7;
     }
   }
   label {
     @include sectionText();
+    vertical-align: top;
+  }
+}
+
+.quiz_result {
+  @include quiz_back();
+  @include vert_flex();
+  align-items: center;
+  h2 {
+    @include headersSection();
+    margin-bottom: 0;
+    margin-top: 43px;
+  }
+  & > p {
+    @include sectionText();
+    width: 50%;
+    text-align: center;
+    margin-top: 0;
+  }
+  & > div {
+    @include horiz_flex();
+  }
+}
+
+.quiz_card {
+  border-radius: 25px;
+  background-color: #fff;
+  text-align: center;
+  img {
+    border-radius: 25px 25px 0 0;
+  }
+  h3 {
+    @include headersSection();
+    text-transform: none;
+    font-size: 32px;
+    margin: 15px 0 0;
+  }
+  p {
+    margin: 20px auto;
+    width: 70%;
+    height: 32px;
+    line-height: 28px;
   }
 }
 

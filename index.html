@@ -176,7 +176,7 @@
 
         <form class="quiz">
             <h2>Question goes here</h2>
-            <div class="quiz_line">
+            <div>
                 <input
                     type="radio"
                     name="option"
@@ -184,9 +184,10 @@
                     value=""
                     checked
                 />
-                <label for="option1">Option 1</label>
+                <label for="option1">Option
+                    1</label>
             </div>
-            <div class="quiz_line">
+            <div>
                 <input
                     type="radio"
                     name="option"
@@ -196,7 +197,7 @@
 
                 <label for="option2">Option 2</label>
             </div>
-            <div class="quiz_line">
+            <div>
                 <input
                     type="radio"
                     name="option"
@@ -206,7 +207,7 @@
 
                 <label for="option3">Option 3</label>
             </div>
-            <div class="quiz_line">
+            <div>
                 <input
                     type="radio"
                     name="option"
@@ -216,15 +217,16 @@
 
                 <label for="option4">Option 4</label>
             </div>
+            <button class="buttons">Далее</button>
         </form>
 
-        <section>
+        <section class="quiz_result">
             <h2>
                 Match!
             </h2>
             <p>Зарегистрируйся и начни общаться!</p>
             <div>
-                <div>
+                <div class="quiz_card">
                     <img
                         src="./assets/img/quiz_person.png"
                         alt="Person"
@@ -232,7 +234,9 @@
                     <h3>
                         Илона, 22
                     </h3>
-                    <a href="">Общаться</a>
+                    <a href="">
+                        <p class='buttons'>Общаться</p>
+                    </a>
                 </div>
             </div>
         </section>
